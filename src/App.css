@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  height: 100vh; /* Make the body fill the viewport height */
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 12px;
+}
+
+header {
+  background-color: tomato;
+  height: 100px;
+}
+
+footer {
+  background-color: slategray;
+  height: 100px;
+  flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+.middle {
+  display: flex;
+  flex-wrap: nowrap;
+  height: calc(100vh - 200px); /* 100vh minus header and footer heights */
+}
+
+nav {
+  background-color: coral;
+  flex: 0 0 20%; /* 20% of the container width */
+}
+
+main {
+  background-color: moccasin;
+  flex: 1; /* Takes the remaining space */
+  overflow-y: scroll;
+}
+
+aside {
+  background-color: sandybrown;
+  flex: 0 0 20%; /* 20% of the container width */
+}
